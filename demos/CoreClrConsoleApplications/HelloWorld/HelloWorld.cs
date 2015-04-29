@@ -19,6 +19,10 @@ internal class Program
         {
             DrawMac();
         }
+        else if (args.Length == 1 && args[0] == "java")
+        {
+            DrawJava();
+        }
         else
         {
             DrawWindows();
@@ -266,6 +270,70 @@ internal class Program
                 Console.Write(c);
             }
 
+        }
+
+        Console.ResetColor();
+        Console.WriteLine();
+    }
+
+    private static void DrawJava()
+    {
+        Console.WriteLine("Would you like to install the Ask.com toolbar?");
+        const string Duke = @"
+                                          `                                     
+                                        :mNNh-      ```                         
+                                   ``   sMMMMh.  `:ydmd:                        
+                                 :ydd+` sMMMMm/ `+mMMMM/                        
+                                .hMMMNo`+MMMMMs`-mMMMMy`                        
+                                `sMMMMNo-mMMMMm/sMMMMd-                         
+               -o/.              -dMMMMNhhMMMMMNNMMMMy`                         
+               .dNdo-`            /mMMMMMMMMMMMMMMMMMy`                         
+               `yMMMmy/`          `/dMMMMMMMMMMMMMMMMd:                         
+                yMMMMMNy/`          :dMMMMMMMMMMMMMMMMo                         
+                sMMMMMMMNh/`        `-yNMMMMMMMMMMMMMMy`                        
+                sMMMMMMMMMNy:`   `:ohdNMMMMMMMMMMMMMMMo                         
+                sMMMMMMMMMMMNy-  +NMMMMMMMMMMMMMMMMMNy-                         
+                yMMMMMMMMMMMMMmo.:dmmdhhdNMMMMMMMMNh/.                          
+               `yMMMMMMMMMMMMMMNh/...````:ohmNMMMN+`                            
+               `hMMMMMMMMMMMMMMMMNs.       ``-+mMh.                             
+               .hMMMMMMMMMMMMMMMMMMd/`         oMy`                             
+               .dMMMMMMMMMNNNMMMMMMMNo.        :Ny`                             
+               -mMMMMMNdhysssshdNMMMMNy-       -Ny.                             
+               :NMMMms::///+++ooshNNhyNm:      +Ns`                             
+               /MMMh+:-:///+++ooosdm/ /mN+.``-omm:                              
+              `oMMmo+////+++++ooosdN/  -dMmdmNMm:                               
+              `yMMmo++++++++oosssymd-   -dMMMMN/                                
+              -dMMMho+++++oosyyyhmd/     -hMMMd.                                
+             `oNMdymmysooooyyhhmms.       -dMMh.                                
+             :mMm/ .+hmmmdmmmmy+.          -mMd-                                
+            -dMMh.    `-:::-.`              /mMo                                
+           :mMMM+`                          `+NN/                               
+         `omMMMd-                            `sNm-                              
+        -hNmmMMs`                             .dMy.                             
+       -dNy-sMm/                               :NN+                             
+       +Nh.`dMh.                                sMd-                            
+       +Ns`:MNo`                                -mMs                            
+       -dd-sMm:                                 `oMd-                           
+        oNdmMy`                                  -mN+`                          
+        -mMMN+                                   `yMy.                          
+        -mMMd-                                    /Nm:                          
+       `oNMMy                                     -NN+                          
+      .oNMMM/                                     .dNo`                         
+     /hNMMMN.                                     .dMs`                         
+    :NMMMMMd             `-/+syyys+:.`            .dMy`                         
+    :dNNNNMs          ./sdmNmdhyyhdmmy/.          .dMy`                         
+     .:/:mM+        -odNmh+:.``  `.-+dNd+`        .mMy`                         
+        -mM/     `-yNNh+.            `/hNh:`      -NNo`                         
+        -mM+   `/ymms:`                `oNmo`    `+Nm/                          
+        .mMd:/odmh+.                     /dNy.   .hMh.                          
+         +dNmmho-`                        -yNdo/+hNd:                           
+          `...`                            `/hNNmho.                                           
+";
+
+        foreach (char c in Duke)
+        {
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Write(c);
         }
 
         Console.ResetColor();
